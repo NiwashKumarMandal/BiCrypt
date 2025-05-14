@@ -74,3 +74,17 @@
 .crypto-table .table-layout .market-cap{
     text-align: end;
 }
+
+.crypto-table .table-layout:last-child{
+    border: none;
+}
+
+.table-layout div{
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.table-layout div img{
+    width: 35px;
+}
