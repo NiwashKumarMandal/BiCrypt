@@ -3,6 +3,7 @@ import { createContext, useEffect, useState } from "react";
 export const CoinContext = createContext();
 
 const CoinContextProvider = (props) => {
+  const apiKey = import.meta.env.VITE_CG_API_KEY;
   const [allCoin, setAllCoin] = useState([]);
   const [currency, setCurrency] = useState({
     name: "usd",
@@ -14,7 +15,7 @@ const CoinContextProvider = (props) => {
       method: "GET",
       headers: {
         accept: "application/json",
-        "x-cg-demo-api-key": "CG-tMLrddjjNXhj187kwkRRjRcV",
+        "x-cg-demo-api-key": apiKey ,
       },
     };
 
@@ -39,6 +40,7 @@ const CoinContextProvider = (props) => {
     allCoin,
     currency,
     setCurrency ,
+    apiKey,
   };
 
   return (

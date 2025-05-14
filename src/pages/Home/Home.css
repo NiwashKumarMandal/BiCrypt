@@ -1,90 +1,113 @@
-.home{
-    padding: 0 10px;
-    padding-bottom: 100px;
-
+.home {
+  padding: 0 10px;
+  padding-bottom: 100px;
 }
 
-.hero{
-    max-width: 600px;
-    margin: 80px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 30px;
+.hero {
+  max-width: 600px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
 }
 
-.hero h1{
-    font-size: max(4vw, 36px);
-
+.hero h1 {
+  font-size: max(4vw, 36px);
 }
 
-.hero p{
-    width: 70%;
-    color: #e3e3e3;
-    line-height: 1.5;
+.hero p {
+  width: 70%;
+  color: #e3e3e3;
+  line-height: 1.5;
 }
 
-.hero form{
-    padding: 8px;
-    border: 2px solid #e3e3e3;
-    width: 80%;
-    background-color: white;
-    border-radius: 5px;
-    font-size: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
+.hero form {
+  padding: 8px;
+  border: 2px solid #e3e3e3;
+  width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
-.hero form input{
-    border: none;
-    outline: none;
-    flex: 1;
-    font-size: 16px;
-    padding-left: 10px;
+.hero form input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  padding-left: 10px;
 }
 
-.hero form button{
-    border: none;
-    background-color: #7927ff;
-    color: white;
-    font-size: 16px;
-    padding: 10px 30px;
-    border-radius: 5px;
-    cursor: pointer;
+.hero form button {
+  border: none;
+  background-color: #7927ff;
+  color: white;
+  font-size: 16px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.crypto-table{
-    max-width: 800px;
-    margin: auto;
-    background: linear-gradient(rgb(84,3,255,0.15),rgb(105,2,153,0.15));
-    border-radius: 15px;
+.crypto-table {
+  max-width: 800px;
+  margin: auto;
+  background: linear-gradient(rgb(84, 3, 255, 0.15), rgb(105, 2, 153, 0.15));
+  border-radius: 15px;
 }
 
-.crypto-table .table-layout{
-    display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr;
-    padding: 15px 20px;
-    align-items: center;
-    border-bottom: 1px solid white;
-}
- 
-.crypto-table .table-layout .market-cap{
-    text-align: end;
+.crypto-table .table-layout {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr;
+  padding: 15px 20px;
+  align-items: center;
+  border-bottom: 1px solid white;
 }
 
-.crypto-table .table-layout:last-child{
-    border: none;
+.crypto-table .table-layout .market-cap {
+  text-align: end;
 }
 
-.table-layout div{
-    display: flex;
-    align-items: center;
-    gap: 10px
+.crypto-table .table-layout:last-child {
+  border: none;
 }
 
-.table-layout div img{
-    width: 35px;
+.table-layout div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.table-layout div img {
+  width: 35px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .crypto-table .table-layout {
+    grid-template-columns: 0.5fr 3fr 1fr 1fr; /* Removed market cap column */
+  }
+
+  .crypto-table .market-cap {
+    display: none; /* Hide market cap */
+  }
+}
+
+@media (max-width: 500px) {
+  .table-layout div img {
+    width: 25px;
+  }
+
+  .table-layout {
+    font-size: 15px;
+  }
+
+  .hero form input {
+    width: 100px;
+  }
 }
